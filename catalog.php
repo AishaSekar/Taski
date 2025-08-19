@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Katalog Produk - Gelang Manik & Joki Tugas</title>
+    <link rel="stylesheet" href="css/catalog.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✨ Taski Sweetz ✨</h1>
+            <p class="subtitle">Gelang Manik-Manik Handmade & Jasa Digital</p>
+            <button onclick="goToLanding()" style="background: linear-gradient(45deg, #e91e63, #ff69b4); color: white; border: none; padding: 10px 20px; border-radius: 25px; margin-top: 15px; cursor: pointer;">
+                ← Kembali ke Beranda
+            </button>
+        </header>
+
+        <!-- Gelang Section -->
+        <div class="section-header">
+            <h2 class="section-title">💎 Koleksi Gelang Manik-Manik</h2>
+            <p class="section-subtitle">Handmade dengan cinta, dibuat khusus untuk Anda </p>
+        </div>
+
+        <div class="bracelet-gallery">
+            <div class="gallery-item" onclick="showBraceletDetail('Gelang Couple', 'Gelang pasangan yang romantis dengan desain matching', 'Rp 8.000')">
+                <img src="images/couple.png" alt="Gelang Couple" class="bracelet-image">
+                <div class="bracelet-name">Gelang Couple</div>
+            </div>
+            <div class="gallery-item" onclick="showBraceletDetail('Gelang Biru Elegant', 'Gelang dengan manik-manik biru yang elegan dan mewah', 'Rp 5.000')">
+                <img src="images/gelang biru.png" alt="Gelang Biru" class="bracelet-image">
+                <div class="bracelet-name">Gelang Biru Elegant</div>
+            </div>
+            <div class="gallery-item" onclick="showBraceletDetail('Gelang Hijau Fresh', 'Gelang dengan nuansa hijau yang segar dan natural', 'Rp 5.000')">
+                <img src="images/gelang hijau.png" alt="Gelang Hijau" class="bracelet-image">
+                <div class="bracelet-name">Gelang Hijau Fresh</div>
+            </div>
+            <div class="gallery-item" onclick="showBraceletDetail('Gelang Hitam Classic', 'Gelang hitam dengan design klasik yang timeless', 'Rp 5.000')">
+                <img src="images/gelang hitam.png" alt="Gelang Hitam" class="bracelet-image">
+                <div class="bracelet-name">Gelang Hitam Classic</div>
+            </div>
+            <div class="gallery-item" onclick="showBraceletDetail('Gelang Kuning Sunshine', 'Gelang kuning cerah seperti sinar matahari', 'Rp 5.000')">
+                <img src="images/gelang kuning.png" alt="Gelang Kuning" class="bracelet-image">
+                <div class="bracelet-name">Gelang Kuning Sunshine</div>
+            </div>
+            <div class="gallery-item" onclick="showBraceletDetail('Gelang Ungu Royal', 'Gelang ungu dengan kesan mewah dan royal', 'Rp 5.000')">
+                <img src="images/gelang ungu.png" alt="Gelang Ungu" class="bracelet-image">
+                <div class="bracelet-name">Gelang Ungu Royal</div>
+            </div>
+            <div class="gallery-item" onclick="showBraceletDetail('Gelang Pink Lucu', 'Gelang pink dengan design yang lucu dan menarik', 'Rp 5.000')">
+                <img src="images/gelang pink.png" alt="Gelang Pink" class="bracelet-image">
+                <div class="bracelet-name">Gelang Pink Lucu</div>
+            </div>
+            <div class="gallery-item" onclick="showBraceletDetail('Gelang Limited Edition', 'Gelang istimewa limited edition sesuai Vtuber', 'Rp 5.000')">
+                <img src="images/vituber.png" alt="Gelang Special" class="bracelet-image">
+                <div class="bracelet-name">Gelang Limited Edition</div>
+            </div>
+            <div class="gallery-item" onclick="showBraceletDetail('Gelang Phone Strap', 'Gelang multifungsi yang bisa jadi phone strap', 'Rp 5.000')">
+                <img src="images/phone strap.png" alt="Phone Strap" class="bracelet-image">
+                <div class="bracelet-name">Gelang Phone Strap</div>
+            </div>
+        </div>
+
+        <!-- UPDATED: Simple & Attractive Services Section -->
+        <div class="section-header">
+            <h2 class="section-title">🚀 Jasa Digital Professional</h2>
+            <p class="section-subtitle">Solusi cepat untuk kebutuhan digital Anda dengan kualitas terbaik</p>
+        </div>
+
+        <div class="joki-section" id="jokiSection">
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <h3 class="service-title">Microsoft Office</h3>
+                    <p class="service-description">Jasa pembuatan dokumen Word, presentasi PowerPoint, dan spreadsheet Excel yang profesional dan menarik</p>
+                    <ul class="service-features">
+                        <li>Word Documents & Reports</li>
+                        <li>PowerPoint Presentations</li>
+                        <li>Excel Spreadsheets & Charts</li>
+                        <li>Template Custom Design</li>
+                        <li>Fast Delivery & Revisi</li>
+                    </ul>
+                    <div class="service-price">Mulai Rp 5.000</div>
+                    <button class="service-btn" onclick="orderService('Microsoft Office')">Pesan Sekarang</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-icon">🎨</div>
+                    <h3 class="service-title">Design Canva</h3>
+                    <p class="service-description">Pembuatan desain kreatif untuk media sosial, poster, flyer, logo, dan berbagai kebutuhan visual Anda</p>
+                    <ul class="service-features">
+                        <li>Social Media Posts & Stories</li>
+                        <li>Poster & Flyer Design</li>
+                        <li>Logo & Brand Identity</li>
+                        <li>Infographic & Presentation</li>
+                        <li>Custom Creative Design</li>
+                    </ul>
+                    <div class="service-price">Mulai Rp 5.000</div>
+                    <button class="service-btn" onclick="orderService('Design Canva')">Pesan Sekarang</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="contact-section">
+            <h2 class="contact-title">💬 Hubungi Kami</h2>
+            <p style="color: #666; margin-bottom: 30px;">
+                Tertarik dengan produk kami? Yuk chat sekarang juga!
+            </p>
+            <div class="contact-buttons">
+                <a href="https://wa.me/628170795173" class="contact-btn whatsapp-btn" target="_blank">
+                    📱 WhatsApp
+                </a>
+                <a href="https://www.instagram.com/taski.sweetz?igsh=eGVmcWU3aXlkNzU=" class="contact-btn instagram-btn" target="_blank">
+                    📸 Instagram
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Navigate to landing page
+        function goToLanding() {
+            window.location.href = 'landing.php';
+        }
+
+        // Show bracelet detail
+        function showBraceletDetail(name, description, price) {
+            const modal = document.getElementById('productModal');
+            const modalContent = document.getElementById('modalContent');
+            
+            modalContent.innerHTML = `
+                <h2 style="color: #e91e63; margin-bottom: 20px;">${name}</h2>
+                <p style="margin-bottom: 15px; line-height: 1.6;">${description}</p>
+                <div style="font-size: 1.5rem; font-weight: bold; color: #e91e63; margin: 20px 0;">${price}</div>
+                <div style="display: flex; gap: 10px; margin-top: 30px;">
+                    <button class="service-btn" style="flex: 1;" onclick="orderBracelet('${name}', '${price}')">Pesan Sekarang</button>
+                    <button style="flex: 1; padding: 15px; background: rgba(233, 30, 99, 0.1); color: #e91e63; border: 2px solid #e91e63; border-radius: 15px; cursor: pointer;" onclick="closeModal()">Tutup</button>
+                </div>
+            `;
+            
+            modal.style.display = 'block';
+        }
+
+        // Order bracelet
+        function orderBracelet(name, price) {
+            const message = `Halo! Saya tertarik dengan ${name} (${price}). Bisa info lebih lanjut?`;
+            const whatsappUrl = `https://wa.me/628170795173?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            closeModal();
+        }
+
+        // Order service
+        function orderService(serviceName) {
+            const message = `Halo! Saya butuh bantuan untuk ${serviceName}. Bisa diskusi lebih lanjut?`;
+            const whatsappUrl = `https://wa.me/628170795173?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+        }
+
+        // Close modal
+        function closeModal() {
+            document.getElementById('productModal').style.display = 'none';
+        }
+
+        // Modal event listeners
+        document.querySelector('.close').addEventListener('click', closeModal);
+        document.getElementById('productModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeModal();
+            }
+        });
+
+        // Scroll Animation for Services Section
+        function isElementPartiallyInViewport(el) {
+            const rect = el.getBoundingClientRect();
+            return (
+                rect.top < (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.bottom > 0
+            );
+        }
+
+        function handleScrollAnimations() {
+            const jokiSection = document.getElementById('jokiSection');
+            const serviceCards = document.querySelectorAll('.service-card');
+            
+            // Animate main joki section
+            if (isElementPartiallyInViewport(jokiSection) && !jokiSection.classList.contains('visible')) {
+                jokiSection.classList.add('visible');
+                
+                // Animate service cards with stagger effect
+                serviceCards.forEach((card, index) => {
+                    setTimeout(() => {
+                        card.classList.add('animate');
+                    }, index * 200);
+                });
+            }
+        }
+
+        // Add scroll event listener
+        window.addEventListener('scroll', handleScrollAnimations);
+        window.addEventListener('load', handleScrollAnimations);
+
+        // Add floating animation to header
+        setInterval(() => {
+            const header = document.querySelector('h1');
+            if (header) {
+                header.style.transform = 'translateY(-2px)';
+                setTimeout(() => {
+                    header.style.transform = 'translateY(0px)';
+                }, 1000);
+            }
+        }, 3000);
+
+        // Add interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add hover effects to gallery items
+            document.querySelectorAll('.gallery-item').forEach(item => {
+                item.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-8px) scale(1.03)';
+                });
+                
+                item.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0) scale(1)';
+                });
+            });
+
+            // Add stagger animation to gallery items
+            document.querySelectorAll('.gallery-item').forEach((item, index) => {
+                item.style.opacity = '0';
+                item.style.transform = 'translateY(30px)';
+                item.style.transition = 'all 0.6s ease';
+                
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+
+            // Initialize scroll animations
+            handleScrollAnimations();
+        });
+
+        // Add sparkle effect
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.innerHTML = '✨';
+            sparkle.style.position = 'fixed';
+            sparkle.style.fontSize = '20px';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '9999';
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            sparkle.style.opacity = '0';
+            sparkle.style.transition = 'all 2s ease';
+            
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.style.opacity = '1';
+                sparkle.style.transform = 'translateY(-50px)';
+            }, 10);
+            
+            setTimeout(() => {
+                sparkle.style.opacity = '0';
+                setTimeout(() => {
+                    if (document.body.contains(sparkle)) {
+                        document.body.removeChild(sparkle);
+                    }
+                }, 500);
+            }, 1500);
+        }
+
+        // Create sparkles periodically
+        setInterval(createSparkle, 4000);
+
+        // Add click effect to buttons
+        document.addEventListener('click', function(e) {
+            if (e.target.matches('.service-btn, .contact-btn')) {
+                const ripple = document.createElement('div');
+                ripple.style.position = 'absolute';
+                ripple.style.borderRadius = '50%';
+                ripple.style.background = 'rgba(255, 255, 255, 0.6)';
+                ripple.style.transform = 'scale(0)';
+                ripple.style.animation = 'ripple 0.6s linear';
+                ripple.style.left = (e.offsetX - 10) + 'px';
+                ripple.style.top = (e.offsetY - 10) + 'px';
+                ripple.style.width = '20px';
+                ripple.style.height = '20px';
+                
+                e.target.style.position = 'relative';
+                e.target.appendChild(ripple);
+                
+                setTimeout(() => {
+                    if (e.target.contains(ripple)) {
+                        ripple.remove();
+                    }
+                }, 600);
+            }
+        });
+
+        // Add ripple animation CSS
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+            
+            .service-btn, .contact-btn {
+                position: relative;
+                overflow: hidden;
+            }
+        `;
+        document.head.appendChild(style);
+
+        // Add mouse follow effect for service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', function(e) {
+                const rect = this.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 15;
+                const rotateY = (centerX - x) / 15;
+                
+                this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-15px) scale(1.05)`;
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) translateY(0) scale(1)';
+            });
+        });
+
+        // Add pulse animation to service icons
+        setInterval(() => {
+            document.querySelectorAll('.service-icon').forEach((icon, index) => {
+                setTimeout(() => {
+                    icon.style.transform = 'scale(1.1)';
+                    setTimeout(() => {
+                        icon.style.transform = 'scale(1)';
+                    }, 300);
+                }, index * 500);
+            });
+        }, 5000);
+    </script>
+</body>
+</html>

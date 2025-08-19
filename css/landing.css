@@ -1,0 +1,431 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* Landing Page Styles */
+        .landing-page {
+            min-height: 100vh;
+            background: #f5d1e8;
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.8) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.8) 1px, transparent 1px);
+            background-size: 30px 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .decorative-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+        }
+
+        .lightning {
+            position: absolute;
+            top: 100px;
+            left: 150px;
+            font-size: 3rem;
+            color: #4CAF50;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .shopping-bag {
+            position: absolute;
+            top: 80px;
+            right: 200px;
+            font-size: 2.5rem;
+            color: #333;
+            animation: float 3s ease-in-out infinite 1s;
+        }
+
+        .sparkle {
+            position: absolute;
+            top: 200px;
+            right: 150px;
+            font-size: 2rem;
+            color: #FF69B4;
+            animation: twinkle 2s ease-in-out infinite;
+        }
+
+        .wave {
+            position: absolute;
+            bottom: 100px;
+            right: 100px;
+            font-size: 3rem;
+            color: #9C27B0;
+            animation: wave 2s ease-in-out infinite;
+        }
+
+        .yellow-circle {
+            position: absolute;
+            bottom: 150px;
+            left: 50px;
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, #FFD700, #FFA500);
+            border-radius: 50%;
+            animation: pulse 3s ease-in-out infinite;
+        }
+
+        .content-container {
+            position: relative;
+            z-index: 3;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            min-height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+        }
+
+        .text-content {
+            flex: 1;
+            max-width: 600px;
+        }
+
+        .brand-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: -20px;
+            font-size: 1.2rem;
+            color: #333;
+            font-weight: 600;
+            animation: brandLogoEntrance 1.2s ease-out;
+        }
+
+        .brand-logo .logo-image {
+            width: 200px;
+            height: 200px;
+            object-fit: contain;
+            margin-right: 10px;
+            border-radius: 12px;
+            animation: logoImageRotate 1.5s ease-out 0.3s both;
+        }
+
+        /* Responsif untuk mobile */
+        @media (max-width: 768px) {
+            .brand-logo .logo-image {
+                width: 65px;
+                height: 65px;
+                margin-right: 12px;
+            }
+            
+            .brand-logo {
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .brand-logo .logo-image {
+                width: 55px;
+                height: 55px;
+                margin-right: 10px;
+            }
+            
+            .brand-logo {
+                font-size: 1rem;
+            }
+        }
+
+        @keyframes brandLogoEntrance {
+            0% {
+                opacity: 0;
+                transform: translateY(-30px) scale(0.8);
+            }
+            50% {
+                opacity: 0.7;
+                transform: translateY(-5px) scale(1.05);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        @keyframes logoImageRotate {
+            0% {
+                opacity: 0;
+                transform: rotate(-180deg) scale(0.5);
+            }
+            70% {
+                transform: rotate(10deg) scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        .main-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: #E91E63;
+            text-shadow: 4px 4px 0px #333;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            animation: slideInLeft 1s ease-out;
+        }
+
+        .sale-title {
+            font-size: 4rem;
+            font-weight: 900;
+            color: #E91E63;
+            text-shadow: 4px 4px 0px #333;
+            margin-bottom: 30px;
+            animation: slideInLeft 1s ease-out 0.3s both;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+            line-height: 1.6;
+            animation: slideInLeft 1s ease-out 0.6s both;
+        }
+
+        .date {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 40px;
+            animation: slideInLeft 1s ease-out 0.9s both;
+        }
+
+        .cta-button {
+            background: linear-gradient(45deg, #E91E63, #FF69B4);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(233, 30, 99, 0.3);
+            animation: slideInLeft 1s ease-out 1.2s both;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 12px 35px rgba(233, 30, 99, 0.4);
+        }
+
+        .image-content {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: slideInRight 1s ease-out 0.5s both;
+        }
+
+        .phone-mockup {
+            background: linear-gradient(145deg, #C8A2C8, #B695C0);
+            border-radius: 40px;
+            padding: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            transform: perspective(1000px) rotateY(-15deg);
+            animation: float 4s ease-in-out infinite;
+        }
+
+        .phone-screen {
+            background: linear-gradient(135deg, #FF9EBE, #FF69B4);
+            border-radius: 30px;
+            width: 300px;
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            padding: 20px;
+        }
+
+        .phone-screen::before {
+            content: "";
+            position: absolute;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 6px;
+            background: rgba(255,255,255,0.3);
+            border-radius: 3px;
+        }
+
+        .bracelet-showcase {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 30px;
+        }
+
+        .bracelet-image {
+            width: 85%;
+            height: auto;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            animation: braceletFloat 3s ease-in-out infinite;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 10px;
+        }
+
+        .price-tag {
+            position: absolute;
+            top: 50px;
+            right: 20px;
+            background: rgba(255,255,255,0.95);
+            color: #E91E63;
+            font-weight: bold;
+            font-size: 1.1rem;
+            padding: 8px 15px;
+            border-radius: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            animation: priceTagPulse 2s ease-in-out infinite;
+        }
+
+        .product-title {
+            color: white;
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-top: 15px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: titleGlow 3s ease-in-out infinite;
+        }
+
+        .balloons {
+            position: absolute;
+            right: -20px;
+            top: 50px;
+            font-size: 3rem;
+            animation: float 3s ease-in-out infinite 2s;
+        }
+
+        /* New Animations */
+        @keyframes braceletFloat {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-10px) scale(1.02); }
+        }
+
+        @keyframes priceTagPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+            50% { text-shadow: 2px 2px 8px rgba(255,255,255,0.5), 0 0 15px rgba(255,255,255,0.3); }
+        }
+
+        /* Existing Animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(1.2); }
+        }
+
+        @keyframes wave {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(15deg); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .content-container {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+            }
+
+            .main-title, .sale-title {
+                font-size: 3rem;
+            }
+
+            .phone-mockup {
+                transform: none;
+                margin-top: 40px;
+            }
+
+            .phone-screen {
+                width: 250px;
+                height: 400px;
+            }
+
+            .lightning {
+                left: 20px;
+                top: 50px;
+            }
+
+            .shopping-bag {
+                right: 20px;
+                top: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .main-title, .sale-title {
+                font-size: 2.5rem;
+            }
+
+            .date {
+                font-size: 1.5rem;
+            }
+            
+            .phone-screen {
+                width: 220px;
+                height: 350px;
+            }
+            
+            .bracelet-image {
+                max-height: 280px;
+            }
+        }
